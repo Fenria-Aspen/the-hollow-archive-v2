@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Hollow Archive</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="landing">
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="brand">THE HOLLOW ARCHIVE</div>
+    <div class="status">INITIALIZATION</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>The Hollow Archive</h1>
+      <p class="lead">An interactive experience about forgotten names, hidden ledgers, and the witness who remembers.</p>
+    </section>
+
+    <section class="panel">
+      <p class="panel-title">Entry Point</p>
+      <blockquote>
+        "The archive does not keep records. It keeps what was never meant to be remembered. Answer correctly, and the door will open."
+      </blockquote>
+
+      <form id="answer-form" data-answer="HOLLOW">
+        <label for="answer">What is the name of the wound at the center of the archive?</label>
+        <input id="answer" name="answer" type="text" placeholder="enter the answer" autocomplete="off" />
+        <button type="submit">Begin</button>
+      </form>
+
+      <p id="result" class="result" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
