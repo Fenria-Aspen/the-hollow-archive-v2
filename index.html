@@ -6,36 +6,38 @@
   <title>The Hollow Archive</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body data-page="landing">
+<body data-page="landing" data-act="0">
   <div class="noise"></div>
-
   <header class="topbar">
     <div class="brand">THE HOLLOW ARCHIVE</div>
     <div class="status">INITIALIZATION</div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
   </header>
-
-  <main class="container">
-    <section class="hero">
-      <h1>The Hollow Archive</h1>
-      <p class="lead">An interactive experience about forgotten names, hidden ledgers, and the witness who remembers.</p>
-    </section>
-
-    <section class="panel">
-      <p class="panel-title">Entry Point</p>
-      <blockquote>
-        "The archive does not keep records. It keeps what was never meant to be remembered. Answer correctly, and the door will open."
-      </blockquote>
-
-      <form id="answer-form" data-answer="HOLLOW">
-        <label for="answer">What is the name of the wound at the center of the archive?</label>
-        <input id="answer" name="answer" type="text" placeholder="enter the answer" autocomplete="off" />
-        <button type="submit">Begin</button>
-      </form>
-
-      <p id="result" class="result" aria-live="polite"></p>
-    </section>
-  </main>
-
+  <nav class="sidebar-nav">
+    <button class="nav-toggle" type="button">☰ MENU</button>
+    <div class="nav-menu">
+      <a href="#" data-section="landing">Home</a>
+      <a href="#" data-section="inventory">Inventory</a>
+      <a href="#" data-section="evidence">Evidence Board</a>
+      <a href="#" data-section="decoder">Cipher Decoder</a>
+      <a href="#" data-section="terminal">Terminal</a>
+      <a href="#" data-section="reset">Reset Game</a>
+    </div>
+  </nav>
+  <main class="container"><div id="content-area"></div></main>
+  <footer class="archive-footer">
+    <div>Status: <span id="footer-status">STANDBY</span></div>
+    <div>Time: <span id="footer-time">--:--:--</span></div>
+  </footer>
+  <script src="assets/js/state.js"></script>
+  <script src="assets/js/cryptography.js"></script>
+  <script src="assets/js/pages/landing.js"></script>
+  <script src="assets/js/pages/acts.js"></script>
+  <script src="assets/js/pages/inventory.js"></script>
+  <script src="assets/js/pages/evidence.js"></script>
+  <script src="assets/js/pages/decoder.js"></script>
+  <script src="assets/js/pages/terminal.js"></script>
+  <script src="assets/js/ui.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
